@@ -16,11 +16,11 @@ return [
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
-        'user' => [
+        /*'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
-        ],
+        ],*/
         'session' => [
             // this is the name of the session cookie used for login on the backend
             'name' => 'advanced-backend',
@@ -46,5 +46,10 @@ return [
         ],
         */
     ],
+    'modules' => [
+	'user' => [
+	  'class' => 'dektrium\user\Module',
+	    ],
+	],
     'params' => $params,
 ];
